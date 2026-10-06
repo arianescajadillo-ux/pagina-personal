@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mis viajes</title>
+
+    <style>
+        @keyframes olasMar {
+            0% {
+                transform: translateY(0px) rotate(0deg);
+            }
+            50% {
+                transform: translateY(-15px) rotate(1deg);
+            }
+            100% {
+                transform: translateY(0px) rotate(0deg);
+            }
+        }
+      
+        @keyframes entradaOlas {
+            0% {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .imagen {
+            border: 2px solid;
+            margin: 10px;
+            padding: 5px;
+            display: inline-block;
+            text-align: center;
+            padding-bottom: 20px;
+            background-color: aquamarine;
+            border-radius: 8px;
+            animation: entradaOlas 1s ease-out forwards;
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+        }
+
+        .imagen:nth-of-type(1) { animation-delay: 0.2s; }
+        .imagen:nth-of-type(2) { animation-delay: 0.4s; }
+        .imagen:nth-of-type(3) { animation-delay: 0.6s; }
+
+        .imagen:hover {
+            animation: olasMar 1.5s ease-in-out infinite;
+            box-shadow: 0px 10px 25px rgba(0, 150, 255, 0.4);
+            background-color: #b0f2e8;
+        }
+
+        body {
+            text-align: center;
+            background-image: url("fondo1.jpg");
+            background-repeat: repeat-x;
+            background-attachment: fixed;
+            background-position: right top;
+            background-color: white;
+            animation: entradaOlas 0.8s ease-out;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            background-color: aqua;
+            color: burlywood;
+            text-align: center;
+            text-transform: uppercase;
+            text-shadow: 1px 1px 4px whitesmoke;
+            letter-spacing: 5px;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        #vuelve {
+            text-decoration: none;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 8px 15px;
+            background-color: dodgerblue;
+            color: #fff;
+            font-size: 25px;
+            margin-left: 10px;
+            display: inline-block;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        #vuelve:hover {
+            background-color: deepskyblue;
+            transform: scale(1.05);
+        }
+
+        .bloque-texto {
+            background-color: antiquewhite;
+            padding: 10px;
+            margin: 10px auto;
+            max-width: 800px;
+            border-radius: 5px;
+            animation: entradaOlas 1s ease-out forwards;
+        }
+
+       
+        @media (max-width: 768px) {
+            .bloque-texto {
+                width: 90%;
+                font-size: 20px;
+            }
+
+            .imagen {
+                display: block;
+                margin: 15px auto;
+                width: 85%;
+                max-width: 300px;
+            }
+
+            .imagen img {
+                width: 100% !important;
+                height: auto !important;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Mis Viajes</h1>
+    
+    <div class="bloque-texto">
+        <p style="font-size: 25px; margin: 0;">
+            Viajo con mi mamá y mi abuela cuando nos desocupamos o tenemos tiempo libre para aprovechar
+            y salir de paseo al lugar que podamos.
+        </p>
+    </div>
+    <br>
+
+    <div class="imagen">
+        <img src="abuela.jpg" alt="foto familia 1" width="250px" height="300px">
+        <p style="width: 250px; font-size: 20px;">
+            Aquí muestro una foto random del lugar donde fui con mi mamá y mi abuela.
+        </p>
+    </div>
+    <div class="imagen">
+        <img src="familia1.jfif" alt="foto familia 2" width="250px" height="300px">
+        <p style="width: 250px; font-size: 20px;">Aquí fuimos a visitar a la familia de mi papá ya que
+            no los veía un tiempo.
+        </p>
+    </div>
+    <div class="imagen">
+        <img src="mama.jfif" alt="foto familia 3" width="250px" height="300px">
+        <p style="width: 250px; font-size: 20px;">Aquí fui con mi mamá a visitar a mi tía y
+            pasar el verano con ella y mi mamá.
+        </p>
+    </div>
+
+    <br><br>
+    <a href="index1.html" id="vuelve">Regresar</a>
+</body>
+</html>

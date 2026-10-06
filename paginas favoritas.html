@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>paginas favoritas</title>
+
+    <style>
+        
+        @keyframes remolinoTerremoto {
+            0% { transform: scale(0) rotate(0deg) translate(0, 0); opacity: 0; }
+            50% { transform: scale(1.05) rotate(180deg) translate(-10px, 10px); opacity: 0.7; }
+            75% { transform: scale(0.95) rotate(270deg) translate(10px, -10px); opacity: 0.9; }
+            100% { transform: scale(1) rotate(360deg) translate(0, 0); opacity: 1; }
+        }
+
+        
+        @keyframes temblorContinuo {
+            0% { transform: translate(0, 0) rotate(0deg); }
+            20% { transform: translate(-6px, 4px) rotate(-1deg); }
+            40% { transform: translate(6px, -4px) rotate(1deg); }
+            60% { transform: translate(-4px, 2px) rotate(-0.5deg); }
+            80% { transform: translate(4px, -2px) rotate(0.5deg); }
+            100% { transform: translate(0, 0) rotate(0deg); }
+        }
+
+        h1 {
+            background-color: brown;
+            color: whitesmoke;
+            text-align: center;
+            text-transform: uppercase;
+            text-shadow: 1px 1px 4px yellow;
+            letter-spacing: 5px;
+            padding: 10px;
+            border-radius: 5px;
+            animation: remolinoTerremoto 1s ease-out;
+        }
+
+        
+        .tabla-contenedor {
+            width: 100%;
+            overflow-x: auto; 
+            margin: 10px auto;
+        }
+
+        table {
+            border: 2px solid #000;
+            border-collapse: collapse;
+            margin: 0 auto; 
+            text-align: center;
+            animation: remolinoTerremoto 1.2s ease-out;
+            transition: transform 0.3s ease;
+            width: 80%;
+            max-width: 700px;
+        }
+
+        
+        table:hover {
+            animation: temblorContinuo 0.4s infinite ease-in-out;
+        }
+
+        table th {
+            border: 2px solid #000;
+            border-collapse: collapse;
+            width: 50%;
+            padding: 2%;
+            background-color: coral;
+            color: white;
+            font-size: 20px;
+        }
+
+        table td {
+            border: 2px solid #000;
+            border-collapse: collapse;
+            padding: 2%;
+            background-color: coral;
+            color: white;
+            font-size: 20px;
+        }
+
+        tr {
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        tr:hover {
+            background-color: #c36f09;
+            transform: scale(1.02);
+        }
+
+        #regreso {
+            text-decoration: none;
+            border: 1px solid #fff;
+            border-radius: 5px;
+            padding: 8px 15px;
+            background-color: #2a9d8f;
+            color: #fff;
+            font-size: 25px;
+            margin-left: 10px;
+            display: inline-block;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        #regreso:hover {
+            background-color: #21867a;
+            transform: scale(1.05);
+        }
+
+        a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+        }
+
+        a:hover {
+            text-decoration: underline;
+            color: yellow;
+        }
+
+        body {
+            background-color: burlywood;
+            background-image: url(fondo1.jpg);
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center;
+            background-size: cover;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        
+        @media (max-width: 768px) {
+            div p {
+                font-size: 20px !important;
+                padding: 0 15px;
+            }
+
+            table {
+                width: 95%;
+            }
+
+            table th, table td {
+                font-size: 16px;
+                padding: 8px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Paginas Favoritas</h1>
+    <div>
+        <p style="font-size: 25px; color: white; text-shadow: 1px 1px 3px black;">
+            Estas son algunas páginas que uso para entretenerme
+            y conversar con amigos y otras personas que conocí jugando videojuegos.
+        </p>
+    </div>
+
+    <div class="tabla-contenedor">
+        <table>
+            <tr>
+                <th>Páginas web</th>
+                <th>Enlaces de entrada</th>
+            </tr>
+            <tr>
+                <td>Youtube</td>
+                <td>
+                    <a href="https://www.youtube.com/watch?v=D98W32iwx3k&t=150s" target="_blank">Video random</a>
+                </td>
+            </tr>
+            <tr>
+                <td>Steam o Epic Games</td>
+                <td>
+                    <a href="https://store.steampowered.com/app/228200/Company_of_Heroes/" target="_blank">Mercado Steam</a>
+                </td>
+            </tr>
+            <tr>
+                <td>Compañía Play</td>
+                <td>
+                    <a href="https://www.playstation.com/es-pe/games/assassins-creed-black-flag-resynced/" target="_blank">Play Station</a>
+                </td>
+            </tr>
+            <tr>
+                <td>Consola Xbox</td>
+                <td>
+                    <a href="https://www.xbox.com/es-ES/games/store/gears-of-war/BPN88ZDRP5FK/0001" target="_blank">Xbox Mercado</a>
+                </td>
+            </tr>
+            <tr>
+                <td>Facebook y Messenger</td>
+                <td>
+                    <a href="https://www.facebook.com/?locale=es_LA" target="_blank">Facebook</a>
+                </td>
+            </tr>
+        </table>
+    </div>
+    
+    <br><br>
+    <a href="index1.html" id="regreso">Regresar</a>
+</body>
+</html>

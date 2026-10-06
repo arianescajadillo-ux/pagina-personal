@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Pagina</title>
+    <link rel="stylesheet" href="style2.css">
+    <style>
+       
+        #datos {
+            background-color: aqua; 
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            padding: 10px;
+            margin: 0;
+            flex-wrap: wrap; 
+        }
+
+        #datos li a {
+            display: block;
+            color: white;
+            text-decoration: none;
+            padding: 15px 20px;
+            text-align: center;
+            font-size: 25px;
+            transition: all 0.3s ease;
+        }
+
+        #datos li a:hover {
+            color: blue;
+            background-color: paleturquoise;
+            transform: translateY(-3px);
+        }
+
+        /* Animación de parpadeo */
+        @keyframes parpadeo {
+            0% { opacity: 1; }
+            50% { opacity: 0.3; }
+            100% { opacity: 1; }
+        }
+
+        h1 {
+            background-color: white;
+            border: 2px solid black;
+            text-align: center;
+            padding: 10px;
+            margin: 10px 0;
+            text-shadow: 1px 1px 4px white;
+            animation: parpadeo 2s infinite; 
+        }
+
+        #presentacion {
+            border: 1px solid aqua;
+            border-radius: 5px;
+            padding: 15px;
+            margin: 10px auto;
+            background-color: white;
+            max-width: 900px;
+        }
+
+        .contenido {
+            text-align: justify;
+            text-indent: 25px;
+            font-size: 25px;
+        }
+
+     
+        .ariam {
+            border: 2px solid;
+            border-radius: 5px;
+            padding: 5px;
+            display: inline-block;
+            background-color: brown;
+            margin-bottom: 10px;
+            margin-left: 60px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .ariam:hover {
+            transform: scale(1.05);
+            box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .ariam img {
+            display: block;
+            max-width: 100%;
+            height: auto;
+        }
+
+        #comentario {
+            border: 1px solid;
+            border-radius: 5px;
+            margin: 10px auto;
+            padding: 15px;
+            text-align: justify;
+            text-indent: 25px;
+            background-color: white;
+            font-size: 25px;
+            max-width: 900px;
+        }
+
+       
+        body {
+            background-image: url('');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+            background-color: white;
+            margin: 0;
+            padding: 0;
+        }
+
+       
+        .oculto {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+
+        .visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+      
+        @media (max-width: 768px) {
+            #datos {
+                flex-direction: column; 
+            }
+
+            #datos li a {
+                font-size: 20px;
+                padding: 10px;
+            }
+
+            .contenido, #comentario {
+                font-size: 18px; 
+                padding: 10px;
+            }
+
+            .ariam {
+                margin-left: 0 !important; 
+                display: block;
+                margin: 10px auto;
+                width: 90%;
+            }
+
+            .ariam img {
+                width: 100% !important;
+                height: auto !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <ul id="datos" class="oculto">
+        <li><a href="mis viajes.html">MIS VIAJES</a></li>
+        <li><a href="mis hobbies.html">MIS HOBBIES</a></li>
+        <li><a href="mis gustos.html">MIS GUSTOS</a></li>
+        <li><a href="paginas favoritas.html">MIS PAGINAS FAVORITAS</a></li>
+        <li><a href="mi formulario.html">MI FORMULARIO</a></li>
+    </ul>
+
+    <h1 class="oculto">Mi Biografia</h1>
+
+    <div id="presentacion" class="oculto">
+        <p class="contenido">Hola profesor este es mi pagina web, soy ariam escajadillo
+            tengo 22 años vivo en villa maria del triunfo lima peru estudio y trabajo en lo que puedo
+            para ayudar a mi familia.
+        </p>
+    </div>
+
+    <br>
+    <div style="text-align: center;">
+        <div class="ariam oculto">
+            <img src="yo xd.webp" alt="yo" width="300px" height="350px">
+        </div>
+    </div>
+    
+    <div id="comentario" class="oculto">
+        <p>
+            Estudio en sise queda por surco queda un poco lejos de mi casa y mi logro es terminar
+            mi carrera y ponerme a trabajar y aprender mas de lo que me enseñaron.
+        </p>
+        <div style="text-align: center; margin-top: 15px;">
+            <div class="ariam" style="margin-left: 0;">
+                <img src="sise.png" alt="sise" width="300px" height="350px">
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const elementos = document.querySelectorAll('.oculto');
+            
+            elementos.forEach((el, index) => {
+                setTimeout(() => {
+                    el.classList.add('visible');
+                }, index * 200);
+            });
+        });
+    </script>
+</body>
+</html>

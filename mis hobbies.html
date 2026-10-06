@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mis hobbies</title>
+
+    <style>
+        @keyframes terremoto {
+            0% { transform: translate(0, 0) rotate(0deg); }
+            20% { transform: translate(-10px, 5px) rotate(-3deg); }
+            40% { transform: translate(10px, -5px) rotate(3deg); }
+            60% { transform: translate(-7px, 3px) rotate(-2deg); }
+            80% { transform: translate(7px, -3px) rotate(2deg); }
+            100% { transform: translate(0, 0) rotate(0deg); }
+        }
+     
+        body {
+            background-image: url(fondo1.jpg);
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: right top;
+            background-color: whitesmoke;
+            animation: terremoto 0.6s ease-in-out;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            background-color: aqua;
+            color: blue;
+            text-align: center;
+            text-transform: uppercase;
+            text-shadow: 1px 1px 4px blueviolet;
+            letter-spacing: 5px;
+            padding: 10px;
+            border-radius: 5px;
+        }
+    
+        .imagen {
+            border: 2px solid;
+            border-radius: 5px;
+            padding: 5px;
+            margin: 5px 0px;
+            display: inline-block;
+            margin-left: 20px;
+            margin-right: 5px;
+            text-align: center;
+            padding-bottom: 20px;
+            padding-top: 10px;
+            background-color: aqua;
+            color: white;
+            vertical-align: top;
+            transition: transform 0.2s ease;
+        }
+
+        .imagen:hover {
+            animation: terremoto 0.4s infinite ease-in-out;
+            background-color: deepskyblue;
+        }
+     
+        .contenedor-video {
+            border: 2px solid white; 
+            border-radius: 5px; 
+            margin: 5px; 
+            padding: 5px; 
+            text-align: center; 
+            display: inline-block;
+            background-color: rgba(0, 0, 0, 0.2);
+            transition: transform 0.2s ease;
+        }
+
+        .contenedor-video:hover {
+            animation: terremoto 0.4s infinite ease-in-out;
+        }
+
+        #regresar {
+            text-decoration: none;
+            border: 1px solid white;
+            border-radius: 5px;
+            padding: 8px 15px;
+            background-color: blue;
+            color: white;
+            font-size: 25px;
+            margin-left: 10px;
+            display: inline-block;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        #regresar:hover {
+            background-color: darkblue;
+            transform: scale(1.05);
+        }
+
+        ul {
+            font-size: 25px;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 15px 40px;
+            border-radius: 8px;
+            display: inline-block;
+        }
+
+        
+        @media (max-width: 768px) {
+            body {
+                text-align: center;
+            }
+
+            ul {
+                width: 80%;
+                font-size: 20px;
+                padding: 10px 20px;
+                text-align: left;
+            }
+
+            .imagen {
+                display: block;
+                margin: 15px auto;
+                width: 85%;
+                max-width: 300px;
+                margin-left: auto !important;
+                margin-right: auto !important;
+            }
+
+            .imagen img {
+                width: 100% !important;
+                height: auto !important;
+            }
+
+            .imagen p {
+                width: 100% !important;
+                font-size: 18px !important;
+            }
+
+            .contenedor-video {
+                width: 95%;
+                max-width: 100%;
+                box-sizing: border-box;
+            }
+
+            .contenedor-video iframe {
+                width: 100% !important;
+                height: auto !important;
+                aspect-ratio: 16/9; 
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Mis hobbies</h1>
+
+    <ul type="circle">
+        <li>Ver películas</li>
+        <li>Hacer ejercicio</li>
+        <li>Jugar videojuegos</li>
+        <li>Cocinar</li>
+    </ul>
+    
+    <br>
+
+    <div class="imagen">
+        <img src="accion.jpg" alt="pelicula" width="300" height="250">
+        <p style="width:250px; font-size:25px;">
+            Aquí muestro una foto viendo una película de acción.
+        </p>
+    </div>
+
+    <div class="imagen">
+        <img src="cybers.jpg" alt="juegos" width="300" height="250">
+        <p style="width:250px; font-size:25px;">
+            Aquí en mis tiempos libres voy a alquilar a cybers con mis amigos o solo desde casa 
+            si no tengo dinero.
+        </p>
+    </div>
+ 
+    <br><br>
+
+    <div class="contenedor-video">
+        <iframe width="560" height="315"
+            src="https://www.youtube.com/embed/vhuUfEv5Onc?si=oVaJ0obEei3BRf0Z"
+            title="YouTube video player"
+            allowfullscreen>
+        </iframe>
+    </div>
+
+    <br><br><br>
+
+    <a href="index1.html" id="regresar">Regresar</a>
+
+</body>
+</html>

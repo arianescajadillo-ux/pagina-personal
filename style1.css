@@ -1,0 +1,115 @@
+#datos {
+    background-color: green; 
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 10px;
+    margin: 0;
+}
+
+#datos li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    font-weight: bold;
+}
+
+
+h1 {
+    background-color: yellow;
+    border: 2px solid black;
+    text-align: center;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+
+#presentacion {
+    background-color: #a7c957; 
+    border: 2px solid black;
+    padding: 15px;
+    margin: 10px 0;
+    text-align: center;
+}
+
+
+.contenedor-imagenes {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: 10px 0;
+}
+
+
+.ariam {
+    border: 2px solid yellow;
+    padding: 5px;
+    background-color: yellow
+    ;
+}
+
+
+#comentario {
+    background-color: orange; 
+    border: 2px solid black;
+    padding: 10px;
+    margin: 10px 0;
+    text-align: center;
+}
+
+#datos li a{
+    display: block;
+    color: brown;
+    text-decoration: none;
+    padding: 20px;
+    text-align: center;
+    font-size: 25px;
+}
+#datos li a:hover{
+    color: blue;
+    background-color: paleturquoise;
+}
+#presentacion{
+    border: 1px solid purple;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 0px auto;
+    background-color: red;
+}
+.contenido{
+    text-align: justify;
+    text-indent: 25px;
+    font-size: 25px;
+}
+.ariam{
+    border: 2px solid;
+    border-radius: 5px;
+    padding: 5px;
+    margin-left: 500px;
+    display: inline-block;
+    background-color: brown;
+    margin-bottom: 10px;
+    margin-left: 60px;
+}
+#comentario{
+    border: 1px solid;
+    border-radius: 5px;
+    margin: 10px;
+    padding: 5px;
+    text-align: justify;
+    text-indent: 25px;
+    background-color: purple;
+    font-size: 25px;
+}
+body{
+    background-image: url(imagenes/diamon.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-color: aqua;
+}
+h1{
+    background-color: orange;
+    text-shadow: 1px 1px 4px red;
+    text-align: center;
+}
+

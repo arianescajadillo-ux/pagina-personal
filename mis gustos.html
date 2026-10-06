@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mis gustos</title>
+
+    <style>
+        .presentacion {
+            border: 2px solid;
+            border-radius: 5px;
+            padding: 5px;
+            margin: 5px;
+            background-color: whitesmoke;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .contenido {
+            text-align: justify;
+            font-size: 25px;
+        }
+    
+        h1 {
+            background-color: aqua;
+            color: whitesmoke;
+            text-align: center;
+            text-transform: uppercase;
+            text-shadow: 1px 1px 4px white;
+            letter-spacing: 5px;
+            text-decoration: underline overline;
+            padding: 10px;
+        }
+
+        
+        @keyframes remolinoEntrada {
+            0% {
+                transform: rotate(0deg) scale(0);
+                opacity: 0;
+            }
+            100% {
+                transform: rotate(360deg) scale(1);
+                opacity: 1;
+            }
+        }
+
+       
+        .comida {
+            border: 2px solid #000;
+            padding: 5px;
+            margin: 10px;
+            display: inline-flex;
+            background-color: blue;
+            border-radius: 8px;
+            overflow: hidden;
+            transition: all 0.6s ease;
+            animation: remolinoEntrada 1s ease-out forwards;
+        }
+     
+        .comida:nth-child(2) { animation-delay: 0.2s; }
+        .comida:nth-child(3) { animation-delay: 0.4s; }
+        .comida:nth-child(4) { animation-delay: 0.6s; }
+
+        .comida img {
+            display: block;
+            transition: transform 0.6s ease;
+        }
+    
+        .comida:hover {
+            transform: rotate(360deg) scale(1.1);
+            background-color: orangered;
+            border-color: yellow;
+            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.4);
+        }
+
+        #volver {
+            text-decoration: none;
+            border: 1px solid;
+            border-radius: 5px;
+            padding: 5px 10px;
+            background-color: orangered;
+            color: #fff;
+            font-size: 25px;
+            margin-left: 10px;
+            display: inline-block;
+            transition: background-color 0.3s ease;
+        }
+
+        #volver:hover {
+            background-color: darkred;
+        }
+
+        body {
+            background-image: url(fondo1.jpg);
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: right top;
+            background-color: white;
+            background-size: cover;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        .oculto {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+
+        .visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+       
+        @media (max-width: 768px) {
+            .presentacion {
+                width: 90%;
+            }
+
+            .contenido {
+                font-size: 20px;
+            }
+
+            .comida {
+                display: block;
+                margin: 15px auto;
+                width: 85%;
+                max-width: 300px;
+            }
+
+            .comida img {
+                width: 100% !important;
+                height: auto !important;
+            }
+        }
+    </style>
+</head>
+<body class="oculto">
+    <h1>Mis Gustos</h1>
+    
+    <div class="presentacion">
+        <p class="contenido">Aquí están los platos de comida que me gusta comer e intentar cocinar junto 
+            a mi abuela y primos hasta que nos salga bien.
+        </p>
+    </div>
+
+    <div class="comida">
+        <img src="torta.jpg" alt="torta de chocolate" width="300px" height="250px">
+    </div>
+    <div class="comida">
+        <img src="tallarin.webp" alt="tallarin" width="300px" height="250px">
+    </div>
+    <div class="comida">
+        <img src="turron.webp" alt="turron" width="300px" height="250px">
+    </div>
+
+    <br>
+    <br>
+    <a href="index1.html" id="volver">Regresar</a>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            document.body.classList.add('visible');
+        });
+    </script>
+</body>
+</html>

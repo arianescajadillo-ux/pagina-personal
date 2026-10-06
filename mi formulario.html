@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>formulario</title>
+
+    <style>
+        .tabla-contenedor {
+            width: 100%;
+            overflow-x: auto; 
+            padding: 10px;
+            box-sizing: border-box;
+        }
+
+        table {
+            margin: 0px auto;
+            width: 100%;
+            max-width: 600px;
+            border-collapse: collapse;
+            background-color: rgba(255, 255, 255, 0.9); 
+            border-radius: 8px;
+            padding: 10px;
+        }
+
+        td {
+            padding: 5px;
+        }
+
+        input[type="text"], textarea {
+            border: 2px solid #555;
+            border-radius: 5px;
+            height: 30px;
+            width: 100%;
+            box-sizing: border-box;
+            padding: 0 8px;
+            font-size: 16px;
+            background-color: white;
+        }
+
+        textarea {
+            height: 80px;
+            padding-top: 8px;
+        }
+
+        button {
+            padding: 8px 15px;
+            font-size: 16px;
+            border-radius: 5px;
+            border: 1px solid #333;
+            cursor: pointer;
+            background-color: #f0f0f0;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #ddd;
+        }
+
+        #volver-1 {
+            text-decoration: none;
+            border: 1px solid;
+            border-radius: 5px;
+            padding: 8px 15px;
+            background-color: red;
+            color: #fff;
+            font-size: 20px;
+            display: inline-block;
+            margin-top: 20px;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        #volver-1:hover {
+            background-color: darkred;
+            transform: scale(1.05);
+        }
+
+        
+        body {
+            background-image: url('fondo2.jfif');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+            background-color: white;
+            text-align: center;
+            margin: 0;
+            padding: 20px 0;
+        }
+
+       
+        @media (max-width: 600px) {
+            table {
+                width: 95% !important;
+            }
+
+            img {
+                width: 100px !important;
+                height: 100px !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div style="text-align:center; font-size:25px; margin:20px 0px; color: white; text-shadow: 1px 1px 3px black;">
+        <b>Mi Formulario</b>
+    </div>
+
+    <div id="frame">
+        <form method="post" action="">
+            <div class="tabla-contenedor">
+                <table>
+                    <caption style="font-size: 28px; margin-bottom: 10px;">READING JOURNAL</caption>
+                    <tr>
+                        <td colspan="4">
+                            <input type="text" id="Nombres y Apellidos" name="Nombres y Apellidos" placeholder="Nombres y Apellidos:">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td rowspan="4" style="text-align: center; vertical-align: middle;">
+                            <img src="sise.png" alt="sise" width="150px" height="150px" style="max-width: 100%; height: auto;">
+                        </td>
+                        <td colspan="3">
+                            <input type="text" id="DNI" name="DNI" placeholder="DNI:">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">
+                            <input type="text" id="Correo" name="Correo" placeholder="Correo:">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">
+                            <input type="text" id="Direccion" name="Direccion" placeholder="Direccion:">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">
+                            <input type="text" id="Telefono" name="Telefono" placeholder="Telefono:">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Trabajo:</td>
+                        <td colspan="3" style="text-align: center;">
+                            <input type="radio" id="si" name="turno" value="si"> <label for="si">SI</label>
+                            <input type="radio" id="no" name="turno" value="no" style="margin-left: 15px;"> <label for="no">NO</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="4">
+                            <textarea id="comentario" name="comentario" placeholder="Comentario:"></textarea>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="4" style="text-align: center; padding-top: 15px;">
+                            <button type="submit">Guardar</button>
+                            <button type="reset" style="margin-left: 10px;">Cancelar</button>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </form>
+    </div>
+
+    <br>
+    <a href="index1.html" id="volver-1">Regresar</a>
+</body>
+</html>
